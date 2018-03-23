@@ -7,23 +7,30 @@
 //
 
 #import "ViewController.h"
+#import "SLSandBoxLog.h"
 
 @interface ViewController ()
-
+{
+    SLSandBoxLog *_sandBoxLog;
+}
 @end
 
 @implementation ViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+   [NSTimer scheduledTimerWithTimeInterval:1.0 target:self selector:@selector(logSomething:) userInfo:nil repeats:YES];
+    
+    _sandBoxLog = [[SLSandBoxLog alloc] initWithFilePath:nil andName:nil];
+    
+    
     // Do any additional setup after loading the view, typically from a nib.
 }
-
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+- (void)logSomething:(NSTimer*)timer
+{
+    static int index = 0;
+    index++;
+    NSLog(@"[SvinLog]:Loging ViewController by index %d",index);
 }
-
-
 @end
