@@ -17,6 +17,8 @@
 		1B004334206497BF00FCC78B /* SLSandBoxLog.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B004333206497BF00FCC78B /* SLSandBoxLog.m */; };
 		1B00433B2064A39300FCC78B /* SLTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B00433A2064A39300FCC78B /* SLTextView.m */; };
 		1B1534872064A7B900B7349A /* SLTextViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B1534862064A7B900B7349A /* SLTextViewController.m */; };
+		1B15348B2064F89F00B7349A /* SLSocketLog.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B15348A2064F89F00B7349A /* SLSocketLog.m */; };
+		1B15348E2064F9F200B7349A /* SLSocketLogServer.c in Sources */ = {isa = PBXBuildFile; fileRef = 1B15348C2064F9F200B7349A /* SLSocketLogServer.c */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,6 +41,10 @@
 		1B00433A2064A39300FCC78B /* SLTextView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SLTextView.m; sourceTree = "<group>"; };
 		1B1534852064A7B900B7349A /* SLTextViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SLTextViewController.h; sourceTree = "<group>"; };
 		1B1534862064A7B900B7349A /* SLTextViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SLTextViewController.m; sourceTree = "<group>"; };
+		1B1534892064F89F00B7349A /* SLSocketLog.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SLSocketLog.h; sourceTree = "<group>"; };
+		1B15348A2064F89F00B7349A /* SLSocketLog.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SLSocketLog.m; sourceTree = "<group>"; };
+		1B15348C2064F9F200B7349A /* SLSocketLogServer.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = SLSocketLogServer.c; sourceTree = "<group>"; };
+		1B15348D2064F9F200B7349A /* SLSocketLogServer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SLSocketLogServer.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,6 +114,7 @@
 		1B0043302064978500FCC78B /* Logs */ = {
 			isa = PBXGroup;
 			children = (
+				1B1534882064F89100B7349A /* SLSocketLog */,
 				1B0043312064979B00FCC78B /* SLSandBoxLog */,
 			);
 			path = Logs;
@@ -131,6 +138,17 @@
 				1B1534862064A7B900B7349A /* SLTextViewController.m */,
 			);
 			path = SLTextView;
+			sourceTree = "<group>";
+		};
+		1B1534882064F89100B7349A /* SLSocketLog */ = {
+			isa = PBXGroup;
+			children = (
+				1B1534892064F89F00B7349A /* SLSocketLog.h */,
+				1B15348A2064F89F00B7349A /* SLSocketLog.m */,
+				1B15348C2064F9F200B7349A /* SLSocketLogServer.c */,
+				1B15348D2064F9F200B7349A /* SLSocketLogServer.h */,
+			);
+			path = SLSocketLog;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -206,8 +224,10 @@
 			files = (
 				1B00431720648FD800FCC78B /* ViewController.m in Sources */,
 				1B00432220648FD800FCC78B /* main.m in Sources */,
+				1B15348B2064F89F00B7349A /* SLSocketLog.m in Sources */,
 				1B00433B2064A39300FCC78B /* SLTextView.m in Sources */,
 				1B00431420648FD800FCC78B /* AppDelegate.m in Sources */,
+				1B15348E2064F9F200B7349A /* SLSocketLogServer.c in Sources */,
 				1B1534872064A7B900B7349A /* SLTextViewController.m in Sources */,
 				1B004334206497BF00FCC78B /* SLSandBoxLog.m in Sources */,
 				1B00432E2064913C00FCC78B /* SLRedirector.m in Sources */,
