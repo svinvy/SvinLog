@@ -15,6 +15,8 @@
 		1B00432220648FD800FCC78B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B00432120648FD800FCC78B /* main.m */; };
 		1B00432E2064913C00FCC78B /* SLRedirector.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B00432D2064913C00FCC78B /* SLRedirector.m */; };
 		1B004334206497BF00FCC78B /* SLSandBoxLog.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B004333206497BF00FCC78B /* SLSandBoxLog.m */; };
+		1B00433B2064A39300FCC78B /* SLTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B00433A2064A39300FCC78B /* SLTextView.m */; };
+		1B1534872064A7B900B7349A /* SLTextViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B1534862064A7B900B7349A /* SLTextViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +35,10 @@
 		1B00432F2064927800FCC78B /* SLRedirectorObserver.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SLRedirectorObserver.h; sourceTree = "<group>"; };
 		1B004332206497BF00FCC78B /* SLSandBoxLog.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SLSandBoxLog.h; sourceTree = "<group>"; };
 		1B004333206497BF00FCC78B /* SLSandBoxLog.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SLSandBoxLog.m; sourceTree = "<group>"; };
+		1B0043392064A39300FCC78B /* SLTextView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SLTextView.h; sourceTree = "<group>"; };
+		1B00433A2064A39300FCC78B /* SLTextView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SLTextView.m; sourceTree = "<group>"; };
+		1B1534852064A7B900B7349A /* SLTextViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SLTextViewController.h; sourceTree = "<group>"; };
+		1B1534862064A7B900B7349A /* SLTextViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SLTextViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +89,7 @@
 			isa = PBXGroup;
 			children = (
 				1B0043302064978500FCC78B /* Logs */,
+				1B0043382064A36900FCC78B /* SLTextView */,
 				1B00432B2064912300FCC78B /* SLRedirector */,
 			);
 			path = SvinLog;
@@ -113,6 +120,17 @@
 				1B004333206497BF00FCC78B /* SLSandBoxLog.m */,
 			);
 			path = SLSandBoxLog;
+			sourceTree = "<group>";
+		};
+		1B0043382064A36900FCC78B /* SLTextView */ = {
+			isa = PBXGroup;
+			children = (
+				1B0043392064A39300FCC78B /* SLTextView.h */,
+				1B00433A2064A39300FCC78B /* SLTextView.m */,
+				1B1534852064A7B900B7349A /* SLTextViewController.h */,
+				1B1534862064A7B900B7349A /* SLTextViewController.m */,
+			);
+			path = SLTextView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -146,7 +164,7 @@
 				TargetAttributes = {
 					1B00430E20648FD800FCC78B = {
 						CreatedOnToolsVersion = 9.0.1;
-						ProvisioningStyle = Automatic;
+						ProvisioningStyle = Manual;
 					};
 				};
 			};
@@ -188,7 +206,9 @@
 			files = (
 				1B00431720648FD800FCC78B /* ViewController.m in Sources */,
 				1B00432220648FD800FCC78B /* main.m in Sources */,
+				1B00433B2064A39300FCC78B /* SLTextView.m in Sources */,
 				1B00431420648FD800FCC78B /* AppDelegate.m in Sources */,
+				1B1534872064A7B900B7349A /* SLTextViewController.m in Sources */,
 				1B004334206497BF00FCC78B /* SLSandBoxLog.m in Sources */,
 				1B00432E2064913C00FCC78B /* SLRedirector.m in Sources */,
 			);
@@ -324,11 +344,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = PATGVQS62X;
 				INFOPLIST_FILE = SvinLog/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.svinvy.SvinLog;
+				PRODUCT_BUNDLE_IDENTIFIER = com.svinvy.Think;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "ed627758-0d46-43a5-ab3d-489839af5a6d";
+				PROVISIONING_PROFILE_SPECIFIER = SvinvyThinkProfile;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -337,11 +360,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = SvinLog/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.svinvy.SvinLog;
+				PRODUCT_BUNDLE_IDENTIFIER = com.svinvy.Think;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;

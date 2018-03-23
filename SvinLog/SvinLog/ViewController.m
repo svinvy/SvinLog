@@ -8,6 +8,7 @@
 
 #import "ViewController.h"
 #import "SLSandBoxLog.h"
+#import "SLTextViewController.h"
 
 @interface ViewController ()
 {
@@ -26,6 +27,13 @@
     
     
     // Do any additional setup after loading the view, typically from a nib.
+}
+-(void)viewDidAppear:(BOOL)animated
+{
+    [super viewDidAppear:animated];
+
+    SLTextViewController *ctl = [[SLTextViewController alloc] init];
+    [self presentViewController:ctl animated:YES completion:nil];
 }
 - (void)logSomething:(NSTimer*)timer
 {
