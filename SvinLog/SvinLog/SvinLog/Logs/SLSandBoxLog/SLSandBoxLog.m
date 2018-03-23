@@ -22,7 +22,7 @@
     if (self = [super init]) {
         _logPath= path?:[NSSearchPathForDirectoriesInDomains(NSDocumentDirectory,NSUserDomainMask, YES) firstObject];
         _logPath = [_logPath stringByAppendingPathComponent:[NSString stringWithFormat:@"%@.log",name?name:@"svin"]];
-        NSLog(@"[SLSandBoxLog]:%@",_logPath);
+        NSLog(@"[SLSandBoxLog]:%@",_logPath)/* tail -f _logPath,you can log it from shell too */;
         
         /* check and remote the file if exist,we only want the log for current process  */
         if ([[NSFileManager defaultManager] fileExistsAtPath:_logPath]) {
@@ -39,6 +39,9 @@
 {
     dispatch_async(_sandBoxQueue,
     ^{
+        if (_regex&&[message rangeOfString:_regex options:NSRegularExpressionSearch].location==NSNotFound) {
+            return /* end */;
+        }
         NSFileHandle *handle = [NSFileHandle fileHandleForWritingAtPath:_logPath];
         [handle seekToEndOfFile];
         [handle writeData:[message dataUsingEncoding:NSUTF8StringEncoding]];

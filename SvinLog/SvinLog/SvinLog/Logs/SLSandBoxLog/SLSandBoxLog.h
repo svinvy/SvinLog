@@ -16,4 +16,6 @@
  **/
 - (instancetype)initWithFilePath:(NSString*)path andName:(NSString*)name NS_DESIGNATED_INITIALIZER;
 - (instancetype)init NS_UNAVAILABLE;
+
+@property(nonatomic,copy)NSString  *regex/* will only save which confirm to this regex if not nil */;
 @end
