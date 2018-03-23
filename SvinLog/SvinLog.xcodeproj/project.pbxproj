@@ -13,6 +13,7 @@
 		1B00431C20648FD800FCC78B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1B00431B20648FD800FCC78B /* Assets.xcassets */; };
 		1B00431F20648FD800FCC78B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1B00431D20648FD800FCC78B /* LaunchScreen.storyboard */; };
 		1B00432220648FD800FCC78B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B00432120648FD800FCC78B /* main.m */; };
+		1B00432E2064913C00FCC78B /* SLRedirector.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B00432D2064913C00FCC78B /* SLRedirector.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,9 @@
 		1B00431E20648FD800FCC78B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1B00432020648FD800FCC78B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1B00432120648FD800FCC78B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		1B00432C2064913C00FCC78B /* SLRedirector.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SLRedirector.h; sourceTree = "<group>"; };
+		1B00432D2064913C00FCC78B /* SLRedirector.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SLRedirector.m; sourceTree = "<group>"; };
+		1B00432F2064927800FCC78B /* SLRedirectorObserver.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SLRedirectorObserver.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +66,7 @@
 				1B00431320648FD800FCC78B /* AppDelegate.m */,
 				1B00431520648FD800FCC78B /* ViewController.h */,
 				1B00431620648FD800FCC78B /* ViewController.m */,
+				1B004328206490A900FCC78B /* SvinLog */,
 				1B00431820648FD800FCC78B /* Main.storyboard */,
 				1B00431B20648FD800FCC78B /* Assets.xcassets */,
 				1B00431D20648FD800FCC78B /* LaunchScreen.storyboard */,
@@ -69,6 +74,24 @@
 				1B00432120648FD800FCC78B /* main.m */,
 			);
 			path = SvinLog;
+			sourceTree = "<group>";
+		};
+		1B004328206490A900FCC78B /* SvinLog */ = {
+			isa = PBXGroup;
+			children = (
+				1B00432B2064912300FCC78B /* SLRedirector */,
+			);
+			path = SvinLog;
+			sourceTree = "<group>";
+		};
+		1B00432B2064912300FCC78B /* SLRedirector */ = {
+			isa = PBXGroup;
+			children = (
+				1B00432C2064913C00FCC78B /* SLRedirector.h */,
+				1B00432D2064913C00FCC78B /* SLRedirector.m */,
+				1B00432F2064927800FCC78B /* SLRedirectorObserver.h */,
+			);
+			path = SLRedirector;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -145,6 +168,7 @@
 				1B00431720648FD800FCC78B /* ViewController.m in Sources */,
 				1B00432220648FD800FCC78B /* main.m in Sources */,
 				1B00431420648FD800FCC78B /* AppDelegate.m in Sources */,
+				1B00432E2064913C00FCC78B /* SLRedirector.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
